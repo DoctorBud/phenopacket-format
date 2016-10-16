@@ -70,6 +70,7 @@
       oReq.open("GET", url);
       oReq.send();
     }
+    loadMarkdown("content/Overview.md", 'overview-detailed-markdown');
     loadMarkdown("content/Vision.md", 'a-vision-detailed-markdown');
     loadMarkdown("content/Technology.md", 'a-technology-detailed-markdown');
     loadMarkdown("content/Community.md", 'a-community-detailed-markdown');
@@ -191,9 +192,12 @@
                   <strong>A Vision</strong>
                 </h4>
                 <p>
-                  An Open and Computable Knowledge-sharing Technology designed for capturing and sharing structured bioinformatic knowledge.
-                  A solution to the Tower of Babel problem of diverse, sometimes siloed, biological databases, terminologies,
-                  and species.
+                  An open standard for sharing disease and phenotype information will improve
+                  our ability to understand, diagnose, and treat both rare and common diseases.
+
+                  A PhenoPacket links detailed phenotype descriptions with disease, patient, and genetic information, enabling clinicians, biologists, and disease and drug researchers to build more complete models of disease.
+
+                  The standard is designed to encourage wide adoption and synergy between the people, organizations and systems that comprise the joint effort to address human disease and biological understanding.
                 </p>
               </div>
             </div>
@@ -209,8 +213,11 @@
                   <strong>A Technology</strong>
                 </h4>
                 <p>
-                  A language-neutral structured knowledge representation with encodings in JSON and YAML, and corresponding
-                  implementations and tools in several languages (Java, JavaScript, Python and More).
+                  PhenoPackets are represented as PXF (Phenotype Exchange Format) files, which may be encoded in JSON or YAML. Each packet associates a list of phenotypic abnormalities with a disease and patient, including details about age, sex, onset, and evidence.
+
+                  PXF uses standard ontologies to ensure interoperability between diverse sources and consumers, to simplify text-mining, and to enable machine reasoning.
+
+                  Software libraries supporting PXF have been written for Java, Python, and Javascript, and the open standard makes it easy to adapt to other languages, systems and applications.
                 </p>
               </div>
             </div>
@@ -226,10 +233,21 @@
                   <strong>A Community</strong>
                 </h4>
                 <p>
-                  Supported by researchers, clinicians, model organism databases and commercial integration efforts.
+                  PhenoPackets is an evolving standard jointly developed by researchers, clinicians, curators and authors. Journals, model organism databases, medical data repositories and commercial efforts are encouraged to adopt PhenoPackets as a way to improve their use and publication of detailed and computable characterizations of disease. This will enable new modes of treatment and drug discovery, including translational research, precision medicine, and automated pipelines revealing knowledge in existing publications and databases.
                 </p>
               </div>
             </div>
+          </div>
+          <a href="#overview-detailed" class="btn btn-dark"
+            onclick=$("#overview-detailed").toggleClass('hidden');>
+            Details
+          </a>
+        </div>
+      </div>
+
+      <div class="row hidden" id="overview-detailed">
+        <div class="col-xs-12">
+          <div id="overview-detailed-markdown" class="markdown">
           </div>
         </div>
       </div>
@@ -287,7 +305,8 @@
             Source code and examples of PhenoPackets technology may be found in the following GitHub repositories:
           </p>
         </div>
-        <div class="col-xs-offset-1 col-xs-11">
+
+        <div class="col-xs-6">
           <ul class="list-unstyled">
             <li>
               <a href="https://github.com/phenopackets" target="_blank">
@@ -307,6 +326,10 @@
                 PhenoPackets Wiki
               </a>
             </li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <ul class="list-unstyled">
             <li>
               <a href="https://github.com/phenopackets/phenopacket-reference-implementation" target="_blank">
                 <i class="fa fa-github fa-fw"></i>
@@ -324,6 +347,44 @@
                 <i class="fa fa-github fa-fw"></i>
                 Java Tools
               </a>
+            </li>
+          </ul>
+        </div>
+
+        <hr class="small light">
+
+        <div class="col-xs-12">
+          <p class="lead">
+            A Google Summer of Code 2016 Project, the PhenoPacket Scraper, extracts ontology-linked phenopackets from published journal abstracts.
+          </p>
+        </div>
+
+        <div class="col-xs-6">
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://github.com/monarch-initiative/phenopacket-scraper-core" target="_blank">
+                <i class="fa fa-github fa-fw"></i>
+                phenopacket-scraper-core
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/monarch-initiative/phenopacket-scraper-api" target="_blank">
+                <i class="fa fa-github fa-fw"></i>
+                phenopacket-scraper-api
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://github.com/monarch-initiative/phenopacket-scraper-webapp" target="_blank">
+                <i class="fa fa-github fa-fw"></i>
+                phenopacket-scraper-webapp
+              </a>
+            </li>
+            <li>
+            &nbsp;
             </li>
           </ul>
         </div>
@@ -358,8 +419,10 @@
           </span>
           <h3>The Community of PhenoPackets</h3>
           <p class="lead">
-            PhenoPackets were designed by, and intended to be used by, the diverse community of researchers, clinicians, educators
-            and curators that rely upon rich, detailed, computable knowledge to do their work.
+            PhenoPackets were designed by, and intended to be used by, the diverse community of
+            researchers, data modelers, computer scientists, bioinformaticians, environmental
+            scientists, and clinicians dedicated to maximizing the value of existing and new data.
+
           </p>
 
 
@@ -443,16 +506,12 @@
         <div class="col-xs-12 text-center">
           <span class="fa-stack fa-4x bg-primary">
             <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-user-md fa-stack-1x text-primary"></i>
+            <i class="fa fa-book fa-stack-1x text-primary"></i>
           </span>
           <h3>Documentation and References</h3>
         </div>
-        <div class="col-xs-12">
-          <p class="lead">
-            Additional information about PhenoPackets may be found in the following GitHub repositories:
-          </p>
-        </div>
-        <div class="col-xs-offset-1 col-xs-11">
+
+        <div class="col-xs-6">
           <ul class="list-unstyled">
             <li>
               <a href="https://github.com/phenopackets" target="_blank">
@@ -472,6 +531,10 @@
                 PhenoPackets Wiki
               </a>
             </li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <ul class="list-unstyled">
             <li>
               <a href="https://github.com/phenopackets/phenopacket-reference-implementation" target="_blank">
                 <i class="fa fa-github fa-fw"></i>
@@ -491,6 +554,44 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <div class="col-xs-12">
+          <ul class="list-unstyled">
+            <li>
+              <i class="fa fa-external-link fa-fw"></i>Processing phenotype data using Phenopackets-API and PXFTools
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://www.open-bio.org/wiki/BOSC_2016" target="_blank">
+                BOSC 2016
+              </a>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://f1000research.com/slides/5-1649" target=_blank>
+                Slides
+              </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://www.youtube.com/watch?v=8UreKE1eGNY" target=_blank>
+                Video
+              </a>
+            </li>
+
+            <li>
+              <i class="fa fa-external-link fa-fw"></i>
+              Phenopackets: Making phenotype profiles FAIR++ for disease diagnosis and discovery
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://www.force11.org/meetings/force2016" target="_blank">
+                Force2016
+              </a>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://figshare.com/articles/Phenopackets_Making_phenotype_profiles_FAIR_for_disease_diagnosis_and_discovery/3180898" target=_blank>
+                Slides
+              </a>
+            </li>
+          </ul>
+
+
+
+
+
         </div>
 
         <div class="text-center">
@@ -559,7 +660,7 @@
             <br>
             <hr class="small">
             <p class="text-muted">
-              Site copyright &copy; PhenoPackets.org 2016
+              Site &copy; PhenoPackets.org 2016
             </p>
             <p class="small text-muted">
               Theme based on
@@ -567,7 +668,7 @@
                 target="_blank">
                 Stylish Portfolio
               </a>
-              , copyright &copy; 2013-2016 Blackrock Digital LLC
+              &copy; 2013-2016 Blackrock Digital LLC
               <br>DNA image adapted from Wikimedia Commons
               <a href="https://commons.wikimedia.org/wiki/File:DNA_com_GGN.jpg"
                 target="_blank">

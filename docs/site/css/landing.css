@@ -39,7 +39,6 @@ div.carousel-inner > div.item > img {
 }
 
 body {
-  xbackground-color: red;
 }
 
 div.markdown {
@@ -109,6 +108,10 @@ ul.list-narrow {
 
 hr.small {
     max-width: 100px;
+}
+
+hr.light {
+  border:1px solid white;
 }
 
 /* Side Menu */
@@ -328,7 +331,6 @@ hr.small {
 
 footer {
   padding: 0 0 30px 0;
-  border: 1px solid red;
 }
 
 #to-top {
