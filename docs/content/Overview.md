@@ -1,3 +1,54 @@
+# PhenoPackets Conceptual Overview
+
+Prevailing clinical pipelines leverage only a tiny fraction of the data available, relying upon patient exome and genome data to characterize patients, and searching public databases to find potential similarities. This is possible because standard formats have been developed for these types of data (genome and variant), which enables automation, search and similarity matching.
+
+Although great strides have been made in standardizing the representation of genetic information for exchange, there are no comparable standards to represent phenotypes (e.g. patient symptoms and disease features) or environmental factors.
+
+The health of an individual organism results from complex interplay between its genes and environment. Although great strides have been made in standardizing the representation of genetic information for exchange, there are no comparable standards to represent phenotypes (e.g. patient symptoms and disease features) or environmental factors (Figure 1). Phenotypic abnormalities of individual organisms are currently described in diverse places and in diverse formats: publications, databases, health records, registries, clinical trials, and even social media. However, the lack of standardization, accessibility, and computability among these contexts makes it extremely difficult to effectively extract and utilize these data, hindering the understanding of genetic and environmental contributions to disease. We are a multi-disciplinary, international scientific team comprised of basic science researchers, data modelers, computer scientists, bioinformaticians, environmental scientists, and clinicians dedicated to maximizing the value of existing and new data. Here we propose a new unit of exchange for the open data marketplace that will make the sharing of phenotype data sustainable, persistent, and reusable without sacrificing the flexibility needed to express rapidly emerging threats to the environment and human health (e.g., Zika virus). This unit, called a “Phenopacket”, will contain the minimal amount of information necessary for describing one or more patients, cohorts, or populations in a computable way. The Phenopacket is citable, persistent, and available outside the paywall of journals, read and written by anyone: data repositories, patient registries, drug companies, environmental monitoring agencies, and even patients themselves, to enable crowdsourced analysis. We will develop the standard and initial software tools to read, write, and validate Phenopackets. The greater accessibility and computability of these data have the potential to revolutionize the field of healthcare analytics. 
+
+
+
+## Standards Enable Computation
+
+VCF for example, Sequence Similarity
+
+PhenoTypes need an exchange format to enable cross-species analysis
+
+PhenoTypes are difficult
+
+
+## Why are PhenoTypes hard?
+
+
+# PXF: Phenotype Exchange Format (BOSC 2016)
+
+- One model, many encodings
+	- YAML, JSON, RDF, TSV
+- Species-agnostic
+	- Microbes, plants, humans
+	- Clinical and basic research
+- Support variety of entities
+	- Patients/individuals organisms, cohorts, populations
+	- Diseases
+	- Papers
+	- Genes, genotypes, alleles, variants
+- Simple for simple cases
+	- Bag of terms model
+- Incremental expressivity
+	- Temporality and Causality
+	- Quantitative and qualitative
+	- Negation, severity, frequency, expressivity
+- Ontology-smart
+	- Rational composition (post-coordination)
+	- Explicit Semantics
+
+## PhenoPackets Features
+
+- Findable
+- Accessible outside paywalls and private data sources
+- Attributable
+- Interoperable and Computable
+- Reusable, exchangeable across contexts and disciplines
 
 
 ## Today's Scientific Landscape
@@ -39,7 +90,7 @@ It is important to understand the difference between the terms **disease** and *
 
 We use **phenotype** to refer to a discrete feature, such as *hypoglycemia*, that is one observable component of a disease, such as diabetes mellitus type II.
 
-The Phenotype Exchange Formalism (PXF) proposed here is designed to support “deep phenotyping”, a process wherein individual components of each phenotype are observed and documented[5](ref:5).
+The Phenotype Exchange Format (PXF) proposed here is designed to support “deep phenotyping”, a process wherein individual components of each phenotype are observed and documented[5](ref:5).
 
 ## What is an Ontology?
 
@@ -100,5 +151,11 @@ It is necessary because study sizes of well over 100,000 patients are thought to
 ## Welcome to the Future
 
 It is timely because studies of this power are now becoming financially and technologically tractable.
+
+
+
+
+
+
 
 
